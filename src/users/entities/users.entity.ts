@@ -13,6 +13,7 @@ export class UsersEntity {
   @OneToMany(
     type => PhotosEntity,
     photosEntity => photosEntity.user,
+    { cascade: ['insert', 'update'], onDelete: 'CASCADE' },
   )
   photos: PhotosEntity[];
 }

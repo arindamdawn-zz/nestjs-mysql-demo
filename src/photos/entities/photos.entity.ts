@@ -11,6 +11,7 @@ export class PhotosEntity {
   @ManyToOne(
     type => UsersEntity,
     usersEntity => usersEntity.photos,
+    { onDelete: 'CASCADE' },
   )
-  user: UsersEntity
+  user: UsersEntity;
 }

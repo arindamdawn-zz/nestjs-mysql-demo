@@ -1,4 +1,5 @@
-import { IsNotEmpty, IsString, IsEmail } from 'class-validator';
+import { IsNotEmpty, IsString, IsEmail, IsArray } from 'class-validator';
+import { CreatePhotoDTO } from 'src/photos/dto/create-photo.dto';
 
 export class CreateUserDTO {
   @IsNotEmpty()
@@ -8,4 +9,7 @@ export class CreateUserDTO {
   @IsNotEmpty()
   @IsString()
   password: string;
+
+  @IsArray()
+  photos: CreatePhotoDTO[];
 }
