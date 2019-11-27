@@ -2,7 +2,6 @@ import { Controller, Post, Body } from '@nestjs/common';
 import { QuizService } from './quiz.service';
 import { Category } from './interfaces/category.interface';
 import { CreateCategoryDTO } from './dto/create-category.dto';
-import { async } from 'rxjs/internal/scheduler/async';
 import { CreateQuestionDTO } from './dto/create-question.dto';
 import { Question } from './interfaces/question.interface';
 import {
